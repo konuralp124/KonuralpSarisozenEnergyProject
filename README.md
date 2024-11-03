@@ -94,6 +94,7 @@ EWMA is used to calculate a weighted average of past observations, where the wei
 
 - **EWMA:**
 
+`EWMA_t = α ⋅ x_t + (1 - α) ⋅ EWMA_{t-1}`
 
 
 $$\text{EWMA}_t=\alpha\cdot x_t+(1 - \alpha)\cdot\text{EWMA}_{t-1}$$
@@ -105,10 +106,10 @@ $$\text{EWMA}_t=\alpha\cdot x_t+(1 - \alpha)\cdot\text{EWMA}_{t-1}$$
 
 - **Variance:**
 
+`σ_t^2 = α ⋅ (x_t - EWMA_t)^2 + (1 - α) ⋅ σ_{t-1}^2`
 
 
 $$\sigma_t^2=\alpha\cdot(x_t - \text{EWMA}_t)^2+(1 - \alpha)\cdot\sigma_{t-1}^2$$
-
 
 
 - **Standard Deviation:**
