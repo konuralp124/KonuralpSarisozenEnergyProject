@@ -29,6 +29,8 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 - **Implementation**: Modeled using a sine function with a 24-hour period.
 - **Equation**:
 
+  Daily Seasonality = 12 × sin((2π × (time mod 24)) / 24)
+
   \[
   \text{Daily Seasonality} = 12 \times \sin\left(\frac{2\pi \times (\text{time} \mod 24)}{24}\right)
   \]
