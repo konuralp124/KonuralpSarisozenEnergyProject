@@ -29,7 +29,7 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 - **Implementation**: Modeled using a sine function with a 24-hour period.
 - **Equation**:
 
-  $$\text{Daily Seasonality} = 12 \times \sin\left(\frac{2\pi \times (\text{time} \mod 24)}{24}\right)$$
+	$$\text{Daily Seasonality} = 12 \times \sin\left(\frac{2\pi \times (\text{time} \mod 24)}{24}\right)$$
 
 - **Explanation**: Represents typical daily fluctuations in energy consumption, such as higher usage during the day and lower usage at night.
 
@@ -38,7 +38,7 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 - **Implementation**: Modeled using a sine function with a 168-hour period (7 days * 24 hours).
 - **Equation**:
 
-  $$\text{Weekly Seasonality} = 6 \times \sin\left(\frac{2\pi \times (\text{time} \mod 168)}{168}\right)$$
+	$$\text{Weekly Seasonality} = 6 \times \sin\left(\frac{2\pi \times (\text{time} \mod 168)}{168}\right)$$
 
 - **Explanation**: Captures variations between weekdays and weekends, reflecting different energy usage patterns.
 
@@ -47,7 +47,7 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 - **Implementation**: Added using a uniform random distribution between -5 and 5.
 - **Equation**:
 
-  $$\text{Noise} = \text{random.uniform}(-2, 2)$$
+	$$\text{Noise} = \text{random.uniform}(-2, 2)$$
 
 - **Explanation**: Introduces variability to mimic unpredictable fluctuations in real-world energy consumption data.
 
@@ -55,13 +55,13 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 
 - **Implementation**: Introduced at random intervals with a 2% chance at each time step.
 - **Types**:
-  - **Positive Anomalies**: Sudden spikes in energy consumption.
-  - **Negative Anomalies**: Sudden drops in energy consumption.
+	- **Positive Anomalies**: Sudden spikes in energy consumption.
+	- **Negative Anomalies**: Sudden drops in energy consumption.
 - **Equation**:
 
-  $$\text{Anomaly Magnitude} = \text{Anomaly Direction} \times \text{random.uniform}(30, 50)$$
+	$$\text{Anomaly Magnitude} = \text{Anomaly Direction} \times \text{random.uniform}(30, 50)$$
 
-  - **Anomaly Direction**: Randomly chosen as -1 or 1.
+	- **Anomaly Direction**: Randomly chosen as -1 or 1.
 
 - **Explanation**: Simulates unexpected events affecting energy consumption, such as equipment failures or unusual high-demand events.
 
@@ -72,7 +72,7 @@ The `data_stream.py` script simulates a realistic energy consumption data stream
 
  $$\text{Concept Drift} = \text{Drift Rate} \times \text{time}$$
 
-  - **Drift Rate**: Set to a small positive value (e.g., 0.001) to represent gradual changes.
+	- **Drift Rate**: Set to a small positive value (e.g., 0.001) to represent gradual changes.
 
 - **Explanation**: Represents long-term changes in energy consumption patterns due to factors like seasonal shifts or increasing demand.
 
@@ -94,18 +94,18 @@ EWMA is used to calculate a weighted average of past observations, where the wei
 
 - **EWMA:**
 
-  $$\text{EWMA}_t = \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1}$$
+	$$\text{EWMA}_t = \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1}$$
 
-  - \( x_t \): Current data point at time \( t \).
-  - \( \alpha \): Smoothing factor (between 0 and 1).
+	- \( x_t \): Current data point at time \( t \).
+	- \( \alpha \): Smoothing factor (between 0 and 1).
 
 - **Variance:**
 
-  $$\sigma_t^2 = \alpha \cdot (x_t - \text{EWMA}_t)^2 + (1 - \alpha) \cdot \sigma_{t-1}^2$$
+	$$\sigma_t^2 = \alpha \cdot (x_t - \text{EWMA}_t)^2 + (1 - \alpha) \cdot \sigma_{t-1}^2$$
 
 - **Standard Deviation:**
 
-  $$\sigma_t = \sqrt{\sigma_t^2}$$
+	$$\sigma_t = \sqrt{\sigma_t^2}$$
 
 **Anomaly Detection:**
 
@@ -181,7 +181,7 @@ The `visualization.py` script provides a real-time visualization of the energy c
 
 - **F1 Score**: Harmonic mean of precision and recall, providing a balance between the two.
 
-  $$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
+	$$\text{F1 Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}$$
 
 ## Possible Future Enhancements
 
@@ -190,7 +190,7 @@ The `visualization.py` script provides a real-time visualization of the energy c
 ## How to Run the Project
 
 1. **Install Dependencies**:
-  pip install -r requirements.txt
-   
+	pip install -r requirements.txt
+	 
 2. **Run visualization.py** 
-  python3 visualization.py
+	python3 visualization.py
