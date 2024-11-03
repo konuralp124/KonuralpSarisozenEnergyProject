@@ -96,8 +96,8 @@ EWMA is used to calculate a weighted average of past observations, where the wei
 
 	$$\text{EWMA}_t = \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1}$$
 
-	- \( x_t \): Current data point at time \( t \).
-	- \( \alpha \): Smoothing factor (between 0 and 1).
+	- $$\( x_t \)$$ : Current data point at time \( t \).
+	- $$\( \alpha \)$$ : Smoothing factor (between 0 and 1).
 
 - **Variance:**
 
