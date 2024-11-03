@@ -96,7 +96,8 @@ EWMA is used to calculate a weighted average of past observations, where the wei
 
 
 
-$$ \text{EWMA}_t = \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1} $$
+$$\text{EWMA}_t$$ 
+$$= \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1}$$
 
 
 
@@ -107,9 +108,7 @@ $$ \text{EWMA}_t = \alpha \cdot x_t + (1 - \alpha) \cdot \text{EWMA}_{t-1} $$
 
 
 
-
-$$ \sigma_t^2 = \alpha \cdot (x_t - \text{EWMA}_t)^2 + (1 - \alpha) \cdot \sigma_{t-1}^2 $$
-
+$$\sigma_t^2 = \alpha \cdot (x_t - \text{EWMA}_t)^2 + (1 - \alpha) \cdot \sigma_{t-1}^2$$
 
 
 
